@@ -41,4 +41,13 @@ public class ArrayOps{
             }
         }return arr;
     }
+
+    public static boolean isRowMagic(int[][] matrix){
+        int firstSum = sum(matrix[0]);
+        for(int i = 0; i < matrix.length; i++){
+            if(sum(matrix[i]) != firstSum){
+                return false;
+            }
+        }return true;
+    }
 }
